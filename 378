@@ -1,0 +1,58 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+public class main {
+
+	public static void main(String[] args) {
+
+		main t = new main();
+		
+		List<Long> number = new ArrayList<>();
+		long x = 400456304;
+		
+		while(x!=0) {
+			number.add(x%10);
+	        x /= 10;
+		}
+		t.option1(number);
+		t.option2(number);
+		t.option3(number);
+	}
+		public List<Long> option1(List<Long> number){
+		System.out.println(number);
+		for(int i=0; i<number.size(); i++) {
+			
+		if(number.get(i)==0) {
+		number.remove(i);
+		i--;
+		}
+	}
+		return number;
+		
+}
+		public List<Long> option2 (List<Long> number){
+		System.out.println(number);
+		Collections.sort(number);
+		System.out.println(number);
+		Collections.reverse(number);
+		System.out.println(number);
+		return number;
+		}
+		public List<Long> option3(List<Long> number){
+		number.get(0);
+		long y = number.get(0);
+		number.remove(0);
+		if(number.size()< y) {
+		System.out.println(true);
+		}else System.out.println(false);
+		
+		for(int i=0; i<number.size(); i++) {
+		number.set(i,(number.get(i)-1));
+		
+			}
+		return number;
+		}
+							
+	}
+			
