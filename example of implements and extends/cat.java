@@ -1,5 +1,5 @@
 
-public class cat extends organism implements cats {
+public class cat extends organism implements cats {//klasy, interfejsy z duzej litery
 
 	public cat(int sleppingTime, String kindOfFun, String gender, String name) {
 		super(sleppingTime, kindOfFun, gender, name);
