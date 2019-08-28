@@ -4,17 +4,19 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class listmovie {
-List<movie> Listm = new ArrayList();
-public void putListm(Object t){
-  Listm.add((movie) t);
-  
+	List<movie> Listm = new ArrayList();
+
+	public void putListm(Object t) {
+		Listm.add((movie) t);
+
+	}
+
+	public void view() {
+		Listm.stream().map(Object::toString).forEach(System.out::println);
+
+	}
+
+	public void sort() {
+		Collections.sort(Listm, new sortmovie());
+	}
 }
- public void view() {
-	 Listm.stream().map(Object::toString).forEach( System.out::println);
-	 
- }
- public void sort() {
-	 Collections.sort(Listm, new sortmovie());
- }
-}
- 
