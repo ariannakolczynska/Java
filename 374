@@ -4,12 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class main {
-
+	//np. private static final int NUMBER_OF_SOMETHING = 9; //dzieki temu ktos wie co oznacza ta liczba 9 bo opisujesz ja slowami
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int number2 = 199;
+		int number2 = 199; //nie nazywaj tak zmiennych
 		int loops = 0;
-		List<Integer> numberlist = new ArrayList();
+		List<Integer> numberlist = new ArrayList(); //numbers albo numberList
 		do {
 			loops++;
 
@@ -20,13 +20,13 @@ public class main {
 
 			for (int i = 0; i < numberlist.size();) {
 				number2 = number2 + numberlist.get(i);
-				numberlist.remove(i);
+				numberlist.remove(i); //w tym forze i zawsze wynosi 0, to jest okej?
 
 			}
 
-			System.out.println(number2);
+			System.out.println(number2); //nie opisujesz tych sysoutów, jakaś informacja "coś tam " + number2
 
-		} while (number2 > 9);
+		} while (number2 > 9); //9 - magic number, takie zmienne powinny byc na gorze
 
 		System.out.println(loops);
 	}
