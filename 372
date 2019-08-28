@@ -2,21 +2,22 @@ import java.util.Scanner;
 
 public class main {
 
+// priavte static final char X_LETTER = 'x'; //zmienne statyczne nazywany z duzych liter
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		//String letter = "xxxyyx";
-		Scanner letterx = new Scanner(System.in);
-		System.out.println("type only x or y");
-		String letter = letterx.nextLine();
-		
+		//String letter = "xxxyyx"; //wywalic
 		int x=0;
 		int y=0;
 		
+		Scanner letterx = new Scanner(System.in); //scanner
+		System.out.println("type only x or y");
+		String letter = letterx.nextLine();
+		
 		for(int i = 0; i<letter.length();i++) {
-				if(letter.charAt(i)=='x') 
+				if(letter.charAt(i)==X_LETTER) //KLAMRY!! zawsze maja byc klamry, nawet jak jest to jedna linijka
 					x++;
 				
-				else if(letter.charAt(i)=='y')
+				else if(letter.charAt(i)=='y') //zamiast ciagle pisac'y' czy 'x' zmienna na gorze
 					y+=1;
 				
 				else if(letter.charAt(i) != 'x' || letter.charAt(i) != 'y') {
@@ -26,7 +27,7 @@ public class main {
 				
 					
 	}
-		if(x==y)
+		if(x==y) //KLAMRY
 			System.out.println("perfect balance");
 		else if(x>y)
 			System.out.println("x is better");
