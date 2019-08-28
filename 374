@@ -7,31 +7,27 @@ public class main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int number2=199;
+		int number2 = 199;
 		int loops = 0;
 		List<Integer> numberlist = new ArrayList();
-	do {
-		loops++;
-	
-		while(number2!=0) {
-			numberlist.add(number2%10);
-	        number2 /= 10;
-		}
-		/*
-		for(int i=0;i<numberlist.size();i++) {
-			System.out.println(numberlist.get(i));
-		}
-	*/
-	for(int i=0;i<numberlist.size();) {
-		number2=number2+numberlist.get(i);
-		numberlist.remove(i);
-		
+		do {
+			loops++;
+
+			while (number2 != 0) {
+				numberlist.add(number2 % 10);
+				number2 /= 10;
+			}
+
+			for (int i = 0; i < numberlist.size();) {
+				number2 = number2 + numberlist.get(i);
+				numberlist.remove(i);
+
+			}
+
+			System.out.println(number2);
+
+		} while (number2 > 9);
+
+		System.out.println(loops);
 	}
-	
-	System.out.println(number2);
-	
-	}
-	while(number2>9);
-	
-	System.out.println(loops);
-}}
+}
