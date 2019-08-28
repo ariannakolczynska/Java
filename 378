@@ -4,32 +4,34 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class main {
+public class main { //nazwa klasy z duzej litery
 
 	public static void main(String[] args) {
+		main t = new main(); //co to jest t
 
-		main t = new main();
-
-		List<Long> number = new ArrayList<>();
-		long x = 400456304;
-
+		List<Long> number = new ArrayList<>(); //numbers
+		long x = 400456304; //poprawic nazwe
 		while (x != 0) {
 			number.add(x % 10);
 			x /= 10;
 		}
+		
 		t.option1(number);
 		t.option2(number);
 		t.option3(number);
 	}
-
-	public List<Long> option1(List<Long> number) {
+	//a nie lepiej np zwrocic nowa liste?
+	public List<Long> option1(List<Long> number) { //nazwa metody removeZerosFromArray, cokolwiek
 		System.out.println(number);
+		//List numbersWithoutZeros = new ArrayList<>();
 		for (int i = 0; i < number.size(); i++) {
 
 			if (number.get(i) == 0) {
 				number.remove(i);
 				i--;
 			}
+			
+			//i tutaj jak nie rowna sie zero to dodaj do tej listy
 		}
 		return number;
 
@@ -46,7 +48,7 @@ public class main {
 	}
 
 	public List<Long> option3(List<Long> number) {
-		number.get(0);
+		number.get(0);//po co to robisz
 		long y = number.get(0);
 		number.remove(0);
 		if (number.size() < y) {
