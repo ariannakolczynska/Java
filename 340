@@ -8,7 +8,7 @@ public class main {
 	public static void main(String[] args) {
 		String word = "a";
 		Scanner wordx = new Scanner(System.in);
-		while(word=="a") {
+		while("a".equals(word)) {
 			
 		try {
 		System.out.print("Type the string: ");
